@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Sora, Unbounded } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/header";
 
-const inter = Inter({ subsets: ["latin"] });
+const sora = Sora({ subsets: ["latin"], variable: "--font-sora", display: "swap" });
+const unbounded = Unbounded({
+  subsets: ["latin"],
+  variable: "--font-unbounded",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Vocabulary Image Generator",
@@ -18,8 +23,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div className="min-h-screen bg-background">
+      <body className={`${sora.variable} ${unbounded.variable} antialiased`}>
+        <div className="min-h-screen bg-background app-shell">
           <Header />
           <main>{children}</main>
         </div>

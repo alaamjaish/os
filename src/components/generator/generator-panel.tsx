@@ -12,7 +12,7 @@ export function GeneratorPanel() {
       <CardHeader>
         <CardTitle>Generate Images</CardTitle>
       </CardHeader>
-      <CardContent className="space-y-6">
+      <CardContent className="space-y-6 stagger">
         <VocabularyInput />
         <StyleSelector />
         <SettingsSelectors />

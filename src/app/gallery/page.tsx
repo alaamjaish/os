@@ -10,7 +10,7 @@ export default function GalleryPage() {
   const [activeTab, setActiveTab] = useState<"local" | "cloud">("local");
 
   return (
-    <div className="container py-6">
+    <div className="container py-6 page-enter">
       <div className="mb-6">
         <h1 className="text-3xl font-bold">Gallery</h1>
         <p className="text-muted-foreground">
